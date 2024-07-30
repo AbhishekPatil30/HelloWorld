@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', credentialsId: 'github', url: 'https://github.com/AbhishekPatil30/java-example.git'
+                git branch: 'master', credentialsId: 'github', url: 'https://github.com/AbhishekPatil30/HelloWorld.git'
             }
         }
 
