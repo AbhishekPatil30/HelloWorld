@@ -4,14 +4,14 @@ pipeline {
         maven 'maven'
     }
     environment {
-        TOMCAT_USER = 'ec2-user'
-        TOMCAT_HOST = 'http://15.207.88.233:9050/'
-        TOMCAT_PATH = '/opt/tomcat/apache-tomcat-9.0.68/webapps'
-    }
+      TOMCAT_USER = "ec2-user"
+      TOMCAT_HOST  = "http://15.207.88.233:9050/"
+      TOMCAT_PATH = "/opt/tomcat/apache-tomcat-9.0.68/webapps"
+}
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', credentialsId: 'github', url: 'https://github.com/AbhishekPatil30/HelloWorld.git'
+                git branch: 'master', credentialsId: 'gittoken', url: 'https://github.com/AbhishekPatil30/HelloWorld.git'
             }
         }
 
