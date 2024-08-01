@@ -29,7 +29,7 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sshagent(['tomcat']) {
+                sshagent(['tomcat_ssh']) {
                     sh "rsync -avz -e 'ssh -o StrictHostKeyChecking=no' --delete target/*.war ${TOMCAT_USER}@${TOMCAT_HOST}:${TOMCAT_PATH}"
                 }
             }
